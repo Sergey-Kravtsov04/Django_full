@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+{% for user in users %}
+    {% if user.is_staff%}
+        <div class="contact">
+        <a>Администратор</a><br>
+        <a>{{user.first_name}}</a><br>
+        <a>{{user.last_name}}</a><br>
+        <a>Никнейм: {{user.username}}</a><br>
+        <a>Контактная почта: {{user.email}}</a><br>
+        </div>
+    {% endif %}
+{% endfor %}
+{% endblock %}

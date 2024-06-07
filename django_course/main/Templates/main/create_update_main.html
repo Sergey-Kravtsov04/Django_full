@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Блог
+{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'main/css/create_update_main.css' %}" xmlns="http://www.w3.org/1999/html">
+{% endblock %}
+
+{% block content %}
+<div class="createForm">
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form">
+            {% csrf_token %}
+            {{form.title}}<br>
+            {{form.content}}<br>
+            {{form.image}}<br>
+            <button type="submit" class="btn btn-info" style="margin:10px 0 2% 0;">{{ action }}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

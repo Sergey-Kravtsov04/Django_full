@@ -1,0 +1,38 @@
+.header {
+    position:fixed;
+    width: 100%;
+    border-bottom: 1px solid;
+    z-index:1;
+    height: 6%;
+    display:flex;
+    background:#b3b3b3;
+    padding:0 2% 0 2%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.leftHand, .rightHand, .middleHand{
+    padding:5px;
+    display:flex;
+    align-items:center;
+}
+.leftHand{
+    width:30%;
+}
+.leftHand a{
+    font-size:17;
+}
+.rightHand{
+    width:30%;
+    justify-content: flex-end;
+}
+.middleHand{
+    width:40%;
+    justify-content: center;
+}
+.btn, .log_out_form{
+    margin:0 10px 0 10px;
+}
+body{
+    margin:0;
+    padding:0;
+    background:#122faa;
+}

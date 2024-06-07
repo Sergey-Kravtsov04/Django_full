@@ -1,0 +1,31 @@
+body {
+    color:white;
+}
+main{
+    padding: 2em;
+}
+section{
+    margin-bottom: 2%;
+    padding:1em;
+    border-radius:5px;
+    box-shadow: 0 0 10px white;
+}
+section h2{
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.blogs {
+    display:flex;
+    flex-direction: column;
+}
+.user_blogs a:hover{
+    background-color: #b3b3b3;
+    color: black;
+}
+.user_blogs a{
+    font_weight:bold;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+

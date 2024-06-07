@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Главная
+{% endblock %}
+{% block static %}
+    <link rel="stylesheet" href="{%  static 'main/css/main_title.css'%}">
+{% endblock %}
+
+{% block content %}
+    <div class="welcome_part">
+        <h2>Мы рады приветствовать вас на нашем сайте</h2>
+        <p>Здесь мы обсуждаем операционки и всё что связано с комплюктерами. Если вы, так же как и мы, предпочитаете ковыряться во всякой низкоуровневой дичи, то милости просим.<br>
+        В разделе с постами вы можете ознакомиться с постами( кто бы мог подумать =/ ). А на закладке "О нас" вы сможете узнать имена тех, кому можно разбить лицо в случае, если вас забанили.<br>
+        Надеюсь, ваше прибывание на этом сайте будет сопровождаться только положительными эмоциями, и вы узнаете очень много о ОСках и не сойдёте с ума. <br>
+        <p>Удачи и всех благ</p>
+        </p>
+        <h4>Список последних новостей:</h4>
+    </div>
+    {% for blog in blogs %}
+        <div class="blog" style="
+            background-image:linear-gradient(90deg,white,white,transparent),
+            url({{blog.image.url}});
+            background-position:right;">
+                <div class="content">
+                    <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
+                </div>
+                <div class="blogInfo">
+                    <a>{{blog.content | truncatechars:100}}</a>
+                </div>
+            </div>
+        <hr>
+    {% endfor %}
+{% endblock %}

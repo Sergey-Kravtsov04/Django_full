@@ -1,0 +1,42 @@
+.welcome_part{
+    color:white;
+    font-size:15;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.welcome_part h4,h2{
+    padding : 2% 0 2% 0;
+}
+.blog{
+    display:flex;
+    width:94%;
+    height: 10%;
+    flex-direction:row;
+    align-items: center;
+    border-radius:20px;
+    margin:1% 0 0 3%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.blog a {
+    color:gray;
+    text-decoration:none;
+    font-size: 25;
+    margin-right:10px;
+}
+.content{
+    width:25%;
+    margin_right: 1%;
+    border-right: 1px solid;
+}
+.content:hover{
+   transition:all 400ms ease-in-out;
+   text-shadow: red 1px 0 20px;
+}
+.blogInfo {
+    width: 30%;
+    align-items: flex-end;
+}
+.blogInfo a{
+    font-size:15;
+    }
